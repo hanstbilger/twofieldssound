@@ -1,0 +1,413 @@
+/* Main CSS file with consistent styling */
+
+/* Reset and force all background colors */
+html,
+body,
+.navbar,
+.dropdown-menu,
+.overlay,
+.background-image {
+    background-color: #f2efe4 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    position: relative;
+    font-family: "Libre Baskerville", serif;
+}
+
+/* Film grain texture effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMTUiLz48L3N2Zz4=");
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+}
+
+/* Hide overlay elements */
+.overlay,
+.background-image {
+    display: none !important;
+}
+
+/* Navbar styling */
+.navbar {
+    position: relative;
+    z-index: 10;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add film grain to navbar */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMTUiLz48L3N2Zz4=");
+    pointer-events: none;
+    z-index: -1;
+    opacity: 1;
+}
+
+/* Remove any background images from navbar */
+.navbar::after {
+    content: none !important;
+}
+
+.navbar.shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    padding-left: 2em;
+}
+
+/* Navigation styling */
+.nav-link,
+.navbar-brand {
+    font-family: "Libre Baskerville", serif !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    cursor: pointer;
+}
+
+/* Right-justify navbar links */
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-right: 1em !important;
+    margin-left: 1em !important;
+}
+
+.nav-item-current {
+    color: #000000 !important;
+}
+
+.dropdown-menu {
+    background-color: #f2efe4 !important;
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.dropdown-item {
+    color: #000000;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background-color: #f2efe4;
+}
+
+/* Custom styling for the text below the logo */
+.custom-text {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* Main content styling */
+main {
+    position: relative;
+    z-index: 2;
+    padding-top: 5em;
+}
+
+/* Bio text styling */
+.bio-text {
+    font-family: "Libre Baskerville", serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 180%;
+    margin-top: 2em;
+}
+
+.bio-photo {
+    margin-top: 2em;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .bio-photo {
+        margin-bottom: 2em;
+    }
+}
+
+.firstcharacter {
+    color: inherit;
+    float: left;
+    font-family: "Libre Baskerville", serif;
+    font-size: 65px;
+    line-height: 55px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.smallcaps {
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+}
+
+/* Portfolio/features styling */
+.feature-title {
+    color: #333;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.feature-subtitle {
+    color: #333;
+    font-family: "Libre Baskerville", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Add fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.5s,
+        transform 0.5s;
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact container */
+.container-contact {
+    padding-top: 5em;
+    margin-bottom: 2em;
+}
+
+/* Footer styling */
+.footer {
+    font-family: "Libre Baskerville", serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    padding-top: 5%;
+    z-index: 2;
+}
+
+.footer a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
+}
+
+.social-btns {
+    text-align: center;
+}
+
+.figcaption-science {
+    text-align: center;
+    margin-top: 2em;
+    font-family: "Libre Baskerville", serif;
+    font-size: 12px;
+}
+
+/* Adjust spacing for header shapes */
+.row.align-items-center .col-3.col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row.align-items-center .col-6.col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Header shape images */
+.header-shape {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 -10px; /* Negative margin to pull shapes closer to center on desktop */
+}
+
+/* Add more space between shapes and text on mobile */
+@media (max-width: 767px) {
+    .header-shape {
+        margin: 0; /* Remove negative margin on mobile */
+        height: 25px !important; /* Smaller shapes on mobile */
+    }
+
+    .row.align-items-center .col-3.col-md-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Make the title text smaller on mobile */
+    .row.align-items-center .col-6.col-md-4 h5 {
+        font-size: 20px !important;
+    }
+
+    /* Fix margin consistency for paragraphs */
+    .bio-text p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Specifically target all bio-text containers to ensure consistent layout */
+    .bio-text {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Reset any column-specific widths on mobile */
+    .col-12 .bio-text {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Adjust the firstcharacter size on mobile */
+    .firstcharacter {
+        font-size: 55px;
+        line-height: 45px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .bio-text {
+        margin-top: 2em;
+    }
+
+    .bio-photo {
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio-text {
+        width: 90vw;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    /* Fix for navbar layout */
+    .navbar {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.5rem 1rem !important;
+        width: 100%;
+        flex-wrap: nowrap !important; /* Prevent wrapping on small screens */
+    }
+
+    .navbar-brand,
+    .mr-auto {
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 1 !important;
+        width: auto !important;
+    }
+
+    /* Ensure the logo doesn't get cut off */
+    .navbar a img {
+        max-width: 100%;
+        height: 25px;
+        width: auto;
+        min-width: 0;
+    }
+
+    /* Position the toggler properly */
+    .navbar-toggler {
+        margin: 0 0 0 0.5rem !important;
+        padding: 0.25rem 0.5rem !important;
+        align-self: center;
+        flex-shrink: 0 !important;
+    }
+
+    /* Make the service list text smaller on mobile - only for homepage */
+    .home-services {
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* Keep the shapes visible on mobile */
+    .header-shape {
+        display: inline-block !important;
+        height: 25px !important;
+    }
+
+    /* Adjust the column sizes to fit the shapes */
+    .col-3.col-md-4 {
+        width: 20% !important;
+    }
+
+    .col-6.col-md-4 {
+        width: 60% !important;
+    }
+
+    /* Make sure the main content doesn't overlap with fixed navbar */
+    main {
+        padding-top: 4.5rem !important;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 320px) {
+    .navbar a img {
+        height: 20px;
+    }
+
+    .header-shape {
+        height: 20px !important;
+    }
+}
+
+/* Ensure logo and navbar items are properly sized on small screens */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        margin-right: 0.5em !important;
+        margin-left: 0.5em !important;
+    }
+}
